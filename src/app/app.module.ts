@@ -14,6 +14,8 @@ import { HackernewsApiService } from './hackernews-api.service';
 import { DomainPipe } from './domain.pipe';
 import { ItemCommentsComponent } from './item-comments/item-comments.component';
 import { routing } from './app.routes';
+import { CommentTreeComponent } from './comment-tree/comment-tree.component';
+import { CommentComponent } from './comment/comment.component';
 
 
 @NgModule({
@@ -24,7 +26,9 @@ import { routing } from './app.routes';
     FooterComponent,
     ItemComponent,
     DomainPipe,
-    ItemCommentsComponent
+    ItemCommentsComponent,
+    CommentTreeComponent,
+    CommentComponent
   ],
   imports: [
     BrowserModule,
