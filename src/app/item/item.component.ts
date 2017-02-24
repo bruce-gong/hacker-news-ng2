@@ -1,5 +1,4 @@
 import { Component, OnInit, Input } from '@angular/core';
-import { HackernewsApiService } from '../hackernews-api.service';
 
 @Component({
   selector: 'app-item',
@@ -7,17 +6,11 @@ import { HackernewsApiService } from '../hackernews-api.service';
   styleUrls: ['./item.component.scss']
 })
 export class ItemComponent implements OnInit {
-  @Input() itemId: number;
-  item;
+  @Input() item: any;
 
-  constructor(private hackernewsApiService: HackernewsApiService) { }
+  constructor() { }
 
   ngOnInit() {
-    this.hackernewsApiService.fetchItem(this.itemId)
-      .subscribe(
-        data => this.item = data,
-        error => console.log('Could not load item' + this.itemId)
-       );
   }
 
 }
